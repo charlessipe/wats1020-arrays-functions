@@ -29,11 +29,16 @@ function truncateWords(longText, numWords){
   console.log("Remove " + removeWordNum + " Words");
   textArray.splice(arrayLength - removeWordNum, removeWordNum);
   console.log(textArray);
+  textArray.push("..."); // add ellipses to end of array
+  console.log(textArray);
+  var myString = textArray.join(" ");
+  return myString;
 }
 
 var shortText = truncateWords(originalText, wordLimit);
 
 console.log('originalText: ' + originalText);
 console.log('shortText: ' + shortText);
+
 
 
