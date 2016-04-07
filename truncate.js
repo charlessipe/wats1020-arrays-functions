@@ -25,11 +25,11 @@ var originalText = "There are two hard things in Computer Science: Cach invalida
 var originalText2 = "We don't beat the reaper by living longer, but by living well, and living fully — for the reaper will come for all of us. The question is: what do we do between the time we’re born and the time he shows up."
 var wordLimit = 8;
 
-function truncateWords(longText, numWords){
+function truncateWords(longText, numWords = 12){ // set default wordLimit if numWords argument is not passed in
   var textArray = longText.split(" ");  // split string into array of strings
   console.log(textArray);
   var arrayLength = textArray.length;  // get length of array of strings
-  var removeWordNum = arrayLength - wordLimit;  // calculate number of words to remove
+  var removeWordNum = arrayLength - numWords;  // calculate number of words to remove
   console.log("Remove " + removeWordNum + " Words");
   textArray.splice(arrayLength - removeWordNum, removeWordNum); // splice array 
   console.log(textArray);
